@@ -66,9 +66,9 @@ class HashMapDoubleHashing {
 };
 
 int findPrime(int n) {
-    """
+    /*
     sieve of eratosthenes to count the next prime in O(N)
-    """
+    */
     bool arr[(2 * n) + 5];
     memset(arr, false, sizeof(arr));
 
