@@ -2,15 +2,16 @@
 #include <iostream>
 #include <cstdio>
 #include <cstring>
+#include <cmath>
 
 using namespace std;
-int c = 0;
+long long c = 0;
 
 struct Node {
     int key;
-    int value;
+    string value;
 
-    Node(int x, int y) {
+    Node(int x, string y) {
         key = x;
         value = y;
     }
@@ -63,21 +64,25 @@ int main() {
     clock_t t;
     t = clock();
 
-    int n, x, y, q;
-    scanf("%d", &n);
-    HashMapLinearProbing linearhashmap(n);
+    int n, key, q;
+    double multiplierLoadFactor;
+    char employeeName[1000];
+    scanf("%d %lf", &n, &multiplierLoadFactor);
+    HashMapLinearProbing linearhashmap(ceil(n / multiplierLoadFactor));
     for (int i = 0; i < n; i++) {
-        int x, y;
-        scanf("%d %d", &x, &y);
-        Node* tmp = new Node(x, y);
+        scanf("%d ", &key);
+        gets(employeeName);
+        string tmpString(employeeName);
+
+        Node* tmp = new Node(key, tmpString);
         linearhashmap.insert(tmp->key, tmp);
     }
     scanf("%d", &q);
     while (q--) {
-        scanf("%d", &x);
-        Node* ret = linearhashmap.find(x);
+        scanf("%d", &key);
+        Node* ret = linearhashmap.find(key);
         // if (ret) {
-        //     printf("%d\n", ret->value);
+        //     printf("%s\n", (ret->value).c_str());
         // } else {
         //     printf("Not found\n");
         // }
@@ -85,5 +90,5 @@ int main() {
 
     t = clock() - t;
     printf("cpu time: %lf\n", ((double)t)/CLOCKS_PER_SEC);
-    printf("comparison: %d\n", c);
+    printf("comparison: %lld\n", c);
 }

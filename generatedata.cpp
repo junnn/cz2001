@@ -9,15 +9,26 @@ The input is N, Q, X, where:
 #include <cstdio>
 #include <unordered_set>
 #include <vector>
+#include <cstring>
+#include <fstream>
 
 using namespace std;
 int n, q, x;
 unordered_set<int> sets, sets2;
 vector<int> vec, vec2, vec3;
+vector<string> names;
+string line;
 
 int main () {
     srand (time(NULL));
+    // input name
+    ifstream myfile ("name.in");
+    while (getline(myfile, line)) {
+        names.push_back(line);
+    }
+
     scanf("%d %d %d", &n, &q, &x);
+    // generate N keys
     for (int i = 0; i < n; i++) {
         while (true) {
             int tmp = rand() % 2000000000;
@@ -28,6 +39,7 @@ int main () {
             }
         }
     }
+    // generate Q - X keys that is not in N
     for (int i = 0; i < q - x; i++) {
         while (true) {
             int tmp = rand() % 2000000000;
@@ -38,6 +50,7 @@ int main () {
             }
         }
     }
+    // generate X keys that is in N
     for (int i = 0; i < x; i++) {
         while (true) {
             int tmp = vec[rand() % vec.size()];
@@ -50,7 +63,9 @@ int main () {
     }
     printf("%d\n", n);
     for (int i = 0; i < vec.size(); i++) {
-        printf("%d %d\n", vec[i], i + 1);
+        int tmp = rand() % names.size();
+        int tmp2 = rand() % names.size();
+        printf("%d %s %s\n", vec[i], names[tmp].c_str(), names[tmp2].c_str());
     }
     printf("%d\n", q);
     for (int i = 0; i < x; i++) {
