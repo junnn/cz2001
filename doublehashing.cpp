@@ -100,7 +100,7 @@ int main() {
     HashMapDoubleHashing doublehashmap(nearestLargerPrime);
     for (int i = 0; i < n; i++) {
         scanf("%d ", &key);
-        gets(employeeName);
+        fgets(employeeName, 1000, stdin);
         string tmpString(employeeName);
 
         Node* tmp = new Node(key, tmpString);

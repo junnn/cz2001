@@ -8,15 +8,16 @@ The input is N, Q, X, L where:
 */
 #include <iostream>
 #include <cstdio>
-#include <unordered_set>
+#include <set>
 #include <vector>
 #include <cstring>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 int n, q, x;
 double loadFactor;
-unordered_set<int> sets, sets2;
+set<int> sets, sets2;
 vector<int> vec, vec2, vec3;
 vector<string> names;
 string line;

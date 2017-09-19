@@ -71,7 +71,7 @@ int main() {
     HashMapLinearProbing linearhashmap(ceil(n / multiplierLoadFactor));
     for (int i = 0; i < n; i++) {
         scanf("%d ", &key);
-        gets(employeeName);
+        fgets(employeeName, 1000, stdin);
         string tmpString(employeeName);
 
         Node* tmp = new Node(key, tmpString);
