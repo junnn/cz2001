@@ -1,23 +1,31 @@
+#include <vector>
+#include <iostream>
 #include <cstdio>
+#include <cmath>
+#include <ctime>
+#include <cstring>
 #include <map>
 
 using namespace std;
 
-map<int, int> maps;
+map<int, string> maps;
 
 int main() {
-    int n, x, y, q;
-    scanf("%d", &n);
+    int n, x, q;
+    double dummy;
+    char y[1000];
+    scanf("%d %lf", &n, &dummy);
     for (int i = 0; i < n; i++) {
-        int x, y;
-        scanf("%d %d", &x, &y);
-        maps[x] = y;
+        scanf("%d ", &x);
+        gets(y);
+        string tmpString(y);
+        maps[x] = tmpString;
     }
     scanf("%d", &q);
     while (q--) {
         scanf("%d", &x);
         if (maps.find(x) != maps.end()) {
-            printf("%d\n", maps[x]);
+            printf("%s\n", maps[x].c_str());
         } else {
             printf("Not found\n");
         }
