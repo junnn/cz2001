@@ -40,7 +40,7 @@ class HashMapDoubleHashing {
                 hashedKey = (hashedKey + d) % mapSize;
                 if (hashedKey == initialHashedKey) break;
             }
-            return hashedKey;
+            return ans;
         }
 
         int findEmptyHashKey(int key) {
@@ -59,7 +59,7 @@ class HashMapDoubleHashing {
         Node* find (int key) {
             int hashKey = findHashKey(key);
             if (hashKey != -1)
-                return hashMap[findHashKey(key)];
+                return hashMap[hashKey];
             return NULL;
         }
 

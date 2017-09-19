@@ -34,7 +34,7 @@ class HashMapLinearProbing {
                 hashedKey = (hashedKey + 1) % mapSize;
                 if (hashedKey == initialHashedKey) break;
             }
-            return hashedKey;
+            return ans;
         }
 
         int findEmptyHashKey(int key) {
