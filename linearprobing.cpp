@@ -68,10 +68,11 @@ int main() {
     double multiplierLoadFactor;
     char employeeName[1000];
     scanf("%d %lf", &n, &multiplierLoadFactor);
-    HashMapLinearProbing linearhashmap(ceil(n / multiplierLoadFactor));
+    HashMapLinearProbing linearhashmap(ceil((double)n / multiplierLoadFactor));
     for (int i = 0; i < n; i++) {
         scanf("%d ", &key);
         fgets(employeeName, 1000, stdin);
+        employeeName[strlen(employeeName) - 1] = '\0';  // remove endline
         string tmpString(employeeName);
 
         Node* tmp = new Node(key, tmpString);

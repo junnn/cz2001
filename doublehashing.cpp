@@ -70,8 +70,7 @@ int findPrime(int n) {
     /*
     sieve of eratosthenes to count the next prime in O(N)
     */
-    bool arr[(2 * n) + 5];
-    memset(arr, false, sizeof(arr));
+    vector<bool> arr(2 * n, false);
 
     for (int i = 2; i <= sqrt(2 * n); i ++) {
         if (arr[i] == false) {
@@ -96,11 +95,12 @@ int main() {
     double multiplierLoadFactor;
     char employeeName[1000];
     scanf("%d %lf", &n, &multiplierLoadFactor);
-    int nearestLargerPrime = findPrime(ceil(n / multiplierLoadFactor));
+    int nearestLargerPrime = findPrime(ceil((double)n / multiplierLoadFactor));
     HashMapDoubleHashing doublehashmap(nearestLargerPrime);
     for (int i = 0; i < n; i++) {
         scanf("%d ", &key);
         fgets(employeeName, 1000, stdin);
+        employeeName[strlen(employeeName) - 1] = '\0';  // remove endline
         string tmpString(employeeName);
 
         Node* tmp = new Node(key, tmpString);

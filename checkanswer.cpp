@@ -17,7 +17,8 @@ int main() {
     scanf("%d %lf", &n, &dummy);
     for (int i = 0; i < n; i++) {
         scanf("%d ", &x);
-        gets(y);
+        fgets(y);
+        y[strlen(y) - 1] = '\0'; // remove endline
         string tmpString(y);
         maps[x] = tmpString;
     }
