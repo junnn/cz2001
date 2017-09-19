@@ -1,9 +1,10 @@
 /*
 Input data:
-The input is N, Q, X, where:
+The input is N, Q, X, L where:
 - N is the number of the data you want to insert
 - Q is the number of search query to perform
 - X is the number of search query that is found in the inserted data
+- L is the load factor
 */
 #include <iostream>
 #include <cstdio>
@@ -14,6 +15,7 @@ The input is N, Q, X, where:
 
 using namespace std;
 int n, q, x;
+double loadFactor;
 unordered_set<int> sets, sets2;
 vector<int> vec, vec2, vec3;
 vector<string> names;
@@ -27,7 +29,7 @@ int main () {
         names.push_back(line);
     }
 
-    scanf("%d %d %d", &n, &q, &x);
+    scanf("%d %d %d %lf", &n, &q, &x, &loadFactor);
     // generate N keys
     for (int i = 0; i < n; i++) {
         while (true) {
@@ -61,7 +63,7 @@ int main () {
             }
         }
     }
-    printf("%d\n", n);
+    printf("%d %lf\n", n, loadFactor);
     for (int i = 0; i < vec.size(); i++) {
         int tmp = rand() % names.size();
         int tmp2 = rand() % names.size();
