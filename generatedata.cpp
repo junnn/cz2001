@@ -1,3 +1,9 @@
+/*
+generate dataset for doublehashing.cpp or linearprobing.cpp to use
+data1: increasing in sequence
+data2: randomly generated
+data3: multiply of hashtable size
+*/
 #include <iostream>
 #include <cstdio>
 #include <set>
