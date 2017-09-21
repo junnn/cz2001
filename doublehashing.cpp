@@ -89,7 +89,7 @@ int findPrime(int n) {
             }
         }
     }
-    for (int i = n + 1; i < 2 * n; i++)
+    for (int i = n; i < 2 * n; i++)
         if (arr[i] == false) return i;
 
     return -1;

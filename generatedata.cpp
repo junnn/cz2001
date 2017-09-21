@@ -5,6 +5,7 @@
 #include <cstring>
 #include <fstream>
 #include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
@@ -172,50 +173,57 @@ void generatedata2() {
 
 void generatedata3() {
     vector<long long> data3, searchSuccess, searchFail;
-    const int HASH_TABLE_SIZE = 99991;
-    printf("starting generate data 1: multiple of hash table size\n");
-    for (int i = 1; i <= 99991; i++)
-        data3.push_back((long long)i * HASH_TABLE_SIZE);
-    printf("generate list ok\n");
-    for (int i = 1; i <= 99991; i++)
-        searchSuccess.push_back((long long)i * HASH_TABLE_SIZE);
-    printf("generate success ok\n");
-    for (int i = 99992; i <= 99991 * 2; i++)
-        searchFail.push_back((long long)i * HASH_TABLE_SIZE);
-    printf("generate unsuccessful ok\n");
+    const int HASH_TABLE_SIZE = 100000;
+    printf("starting generate data 3: multiple of hash table size\n");
 
     for (int i = 25; i <= 75; i += 25) {
+        data3.clear(); searchSuccess.clear(); searchFail.clear();
+        for (int j = 1; j <= 100000; j++)
+            data3.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+        printf("generate list ok\n");
+        for (int j = 1; j <= 100000; j++)
+            searchSuccess.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+        printf("generate success ok\n");
+
         ofstream myfile;
         string filename = "data3_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "99991 0." << intToStr(i) << "\n";
-        for (int i = 0; i < data3.size(); i++) {
+        myfile << "100000 0." << intToStr(i) << "\n";
+        for (int j = 0; j < data3.size(); j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
-            myfile << data3[i] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
+            myfile << data3[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "99991\n";
-        for (int i = 0; i < searchSuccess.size(); i++) {
-            myfile << searchSuccess[i] << endl;
+        myfile << "100000\n";
+        for (int j = 0; j < searchSuccess.size(); j++) {
+            myfile << searchSuccess[j] << endl;
         }
         myfile.close();
     }
 
     for (int i = 25; i <= 75; i += 25) {
+        data3.clear(); searchSuccess.clear(); searchFail.clear();
+        for (int j = 1; j <= 100000; j++)
+            data3.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+        printf("generate list ok\n");
+        for (int j = 100001; j <= 100000 * 2; j++)
+            searchFail.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+        printf("generate unsuccessful ok\n");
+
         ofstream myfile;
         string filename = "data3_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "99991 0." << intToStr(i) << "\n";
-        for (int i = 0; i < data3.size(); i++) {
+        myfile << "100000 0." << intToStr(i) << "\n";
+        for (int j = 0; j < data3.size(); j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
-            myfile << data3[i] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
+            myfile << data3[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "99991\n";
-        for (int i = 0; i < searchFail.size(); i++) {
-            myfile << searchFail[i] << endl;
+        myfile << "100000\n";
+        for (int j = 0; j < searchFail.size(); j++) {
+            myfile << searchFail[j] << endl;
         }
         myfile.close();
     }
