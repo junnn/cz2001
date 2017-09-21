@@ -12,9 +12,8 @@ map<int, string> maps;
 
 int main() {
     int n, x, q;
-    double dummy;
     char y[1000];
-    scanf("%d %lf", &n, &dummy);
+    scanf("%d", &n);
     for (int i = 0; i < n; i++) {
         scanf("%d ", &x);
         fgets(y, 1000, stdin);
