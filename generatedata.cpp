@@ -92,15 +92,15 @@ void generatedata1() {
         string filename = "data1_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "100000 0." << intToStr(i) << "\n";
-        for (int i = 0; i < data1.size(); i++) {
+        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
-            myfile << data1[i] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
+            myfile << data1[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "100000\n";
-        for (int i = 0; i < searchSuccess.size(); i++) {
-            myfile << searchSuccess[i] << endl;
+        myfile << i * 1000 << "\n";
+        for (int j = 0; j < i * 1000; j++) {
+            myfile << searchSuccess[j] << endl;
         }
         myfile.close();
     }
@@ -110,15 +110,15 @@ void generatedata1() {
         string filename = "data1_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "100000 0." << intToStr(i) << "\n";
-        for (int i = 0; i < data1.size(); i++) {
+        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
-            myfile << data1[i] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
+            myfile << data1[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "100000\n";
-        for (int i = 0; i < searchFail.size(); i++) {
-            myfile << searchFail[i] << endl;
+        myfile << i * 1000 << "\n";
+        for (int j = 0; j < i * 1000; j++) {
+            myfile << searchFail[j] << endl;
         }
         myfile.close();
     }
@@ -139,15 +139,15 @@ void generatedata2() {
         string filename = "data2_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "100000 0." << intToStr(i) << "\n";
-        for (int i = 0; i < data2.size(); i++) {
+        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
-            myfile << data2[i] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
+            myfile << data2[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "100000\n";
-        for (int i = 0; i < searchSuccess.size(); i++) {
-            myfile << searchSuccess[i] << endl;
+        myfile << i * 1000 << "\n";
+        for (int j = 0; j < i * 1000; j++) {
+            myfile << searchSuccess[j] << endl;
         }
         myfile.close();
     }
@@ -157,15 +157,15 @@ void generatedata2() {
         string filename = "data2_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "100000 0." << intToStr(i) << "\n";
-        for (int i = 0; i < data2.size(); i++) {
+        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
-            myfile << data2[i] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
+            myfile << data2[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "100000\n";
-        for (int i = 0; i < searchFail.size(); i++) {
-            myfile << searchFail[i] << endl;
+        myfile << i * 1000 << "\n";
+        for (int j = 0; j < i * 1000; j++) {
+            myfile << searchFail[j] << endl;
         }
         myfile.close();
     }
@@ -189,14 +189,14 @@ void generatedata3() {
         string filename = "data3_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "100000 0." << intToStr(i) << "\n";
-        for (int j = 0; j < data3.size(); j++) {
+        myfile << i * 1000 << " 0." << intToStr(i) << "\n";;
+        for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
             myfile << data3[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "100000\n";
-        for (int j = 0; j < searchSuccess.size(); j++) {
+        myfile << i * 1000 << "\n";
+        for (int j = 0; j < i * 1000; j++) {
             myfile << searchSuccess[j] << endl;
         }
         myfile.close();
@@ -215,14 +215,14 @@ void generatedata3() {
         string filename = "data3_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << "100000 0." << intToStr(i) << "\n";
-        for (int j = 0; j < data3.size(); j++) {
+        myfile << i * 1000 << " 0." << intToStr(i) << "\n";;
+        for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
             myfile << data3[j] << " " << names[firstname].c_str() <<" "<< names[lastname].c_str() << endl;
         }
-        myfile << "100000\n";
-        for (int j = 0; j < searchFail.size(); j++) {
+        myfile << i * 1000 << "\n";
+        for (int j = 0; j < i * 1000; j++) {
             myfile << searchFail[j] << endl;
         }
         myfile.close();
