@@ -72,10 +72,9 @@ class HashMapLinearProbing {
 int main() {
     int n = 100000, q, x;
     long long key;
-    double multiplierLoadFactor;
     char employeeName[1000];
-    scanf("%d %lf", &x, &multiplierLoadFactor);
-    HashMapLinearProbing linearhashmap(ceil((double)n / multiplierLoadFactor));
+    scanf("%d", &x);
+    HashMapLinearProbing linearhashmap(ceil((double)n));
     for (int i = 0; i < x; i++) {
         scanf("%lld ", &key);
         fgets(employeeName, 1000, stdin);

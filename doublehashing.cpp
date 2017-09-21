@@ -96,14 +96,13 @@ int findPrime(int n) {
 }
 
 int main() {
-    int n = 100000, q, x;
+    int n = 100000, q, dataSize;
     long long key;
-    double multiplierLoadFactor;
     char employeeName[1000];
-    scanf("%d %lf", &x, &multiplierLoadFactor);
-    int nearestLargerPrime = findPrime(ceil((double)n / multiplierLoadFactor));
+    scanf("%d", &dataSize);
+    int nearestLargerPrime = findPrime(ceil((double)n));
     HashMapDoubleHashing doublehashmap(nearestLargerPrime);
-    for (int i = 0; i < x; i++) {
+    for (int i = 0; i < dataSize; i++) {
         scanf("%lld ", &key);
         fgets(employeeName, 1000, stdin);
         employeeName[strlen(employeeName) - 1] = '\0';  // remove endline

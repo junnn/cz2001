@@ -92,7 +92,7 @@ void generatedata1() {
         string filename = "data1_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        myfile << i * 1000 << "\n";
         for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
@@ -110,7 +110,7 @@ void generatedata1() {
         string filename = "data1_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        myfile << i * 1000 << "\n";
         for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
@@ -139,7 +139,7 @@ void generatedata2() {
         string filename = "data2_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        myfile << i * 1000 << "\n";
         for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
@@ -157,7 +157,7 @@ void generatedata2() {
         string filename = "data2_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << i * 1000 << " 0." << intToStr(i) << "\n";
+        myfile << i * 1000 << "\n";
         for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
@@ -189,7 +189,7 @@ void generatedata3() {
         string filename = "data3_0." + intToStr(i) + "_success.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << i * 1000 << " 0." << intToStr(i) << "\n";;
+        myfile << i * 1000 << "\n";;
         for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();
@@ -215,7 +215,7 @@ void generatedata3() {
         string filename = "data3_0." + intToStr(i) + "_unsuccessful.in";
         printf("writing to %s\n", filename.c_str());
         myfile.open (filename);
-        myfile << i * 1000 << " 0." << intToStr(i) << "\n";;
+        myfile << i * 1000 << "\n";;
         for (int j = 0; j < i * 1000; j++) {
             int firstname = rand() % names.size();
             int lastname = rand() % names.size();

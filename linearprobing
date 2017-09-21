@@ -5,9 +5,9 @@ total comparison: 25000
 average comparison: 1.000000
 max comparison: 1
 min comparison: 1
-total CPU time: 9843 microsecond
-average CPU time: 0.393720 microsecond
-max CPU time: 19 microsecond
+total CPU time: 11545 microsecond
+average CPU time: 0.461800 microsecond
+max CPU time: 16 microsecond
 min CPU time: 0 microsecond
 
 data type: data1
@@ -17,9 +17,9 @@ total comparison: 50000
 average comparison: 1.000000
 max comparison: 1
 min comparison: 1
-total CPU time: 19060 microsecond
-average CPU time: 0.381200 microsecond
-max CPU time: 65 microsecond
+total CPU time: 20382 microsecond
+average CPU time: 0.407640 microsecond
+max CPU time: 18 microsecond
 min CPU time: 0 microsecond
 
 data type: data1
@@ -29,199 +29,187 @@ total comparison: 75000
 average comparison: 1.000000
 max comparison: 1
 min comparison: 1
-total CPU time: 27741 microsecond
-average CPU time: 0.369880 microsecond
+total CPU time: 28820 microsecond
+average CPU time: 0.384267 microsecond
+max CPU time: 19 microsecond
+min CPU time: 0 microsecond
+
+data type: data2
+load factor: 0.25
+successful or not: success
+total comparison: 29242
+average comparison: 1.169680
+max comparison: 8
+min comparison: 1
+total CPU time: 11644 microsecond
+average CPU time: 0.465760 microsecond
+max CPU time: 17 microsecond
+min CPU time: 0 microsecond
+
+data type: data2
+load factor: 0.50
+successful or not: success
+total comparison: 75068
+average comparison: 1.501360
+max comparison: 27
+min comparison: 1
+total CPU time: 22841 microsecond
+average CPU time: 0.456820 microsecond
+max CPU time: 24 microsecond
+min CPU time: 0 microsecond
+
+data type: data2
+load factor: 0.75
+successful or not: success
+total comparison: 190906
+average comparison: 2.545413
+max comparison: 134
+min comparison: 1
+total CPU time: 33418 microsecond
+average CPU time: 0.445573 microsecond
 max CPU time: 26 microsecond
 min CPU time: 0 microsecond
 
-data type: data2
-load factor: 0.25
-successful or not: success
-total comparison: 25856
-average comparison: 1.034240
-max comparison: 4
-min comparison: 1
-total CPU time: 11311 microsecond
-average CPU time: 0.452440 microsecond
-max CPU time: 14 microsecond
-min CPU time: 0 microsecond
-
-data type: data2
-load factor: 0.50
-successful or not: success
-total comparison: 58395
-average comparison: 1.167900
-max comparison: 13
-min comparison: 1
-total CPU time: 20579 microsecond
-average CPU time: 0.411580 microsecond
-max CPU time: 21 microsecond
-min CPU time: 0 microsecond
-
-data type: data2
-load factor: 0.75
-successful or not: success
-total comparison: 124787
-average comparison: 1.663827
-max comparison: 37
-min comparison: 1
-total CPU time: 30268 microsecond
-average CPU time: 0.403573 microsecond
-max CPU time: 63 microsecond
-min CPU time: 0 microsecond
-
 data type: data3
-load factor: 0.25
-successful or not: success
-total comparison: 312512500
-average comparison: 12500.500000
-max comparison: 25000
-min comparison: 1
-total CPU time: 3027910 microsecond
-average CPU time: 121.116400 microsecond
-max CPU time: 643 microsecond
-min CPU time: 0 microsecond
-
-data type: data3
-load factor: 0.50
-successful or not: success
-total comparison: 1250025000
-average comparison: 25000.500000
-max comparison: 50000
-min comparison: 1
-total CPU time: 11996959 microsecond
-average CPU time: 239.939180 microsecond
-max CPU time: 1128 microsecond
-min CPU time: 0 microsecond
-
-data type: data3
-load factor: 0.75
-successful or not: success
-total comparison: 2812537500
-average comparison: 37500.500000
-max comparison: 75000
-min comparison: 1
-total CPU time: 29384085 microsecond
-average CPU time: 391.787800 microsecond
-max CPU time: 1642 microsecond
-min CPU time: 0 microsecond
-
-data type: data1
 load factor: 0.25
 successful or not: success
 total comparison: 25000
 average comparison: 1.000000
 max comparison: 1
 min comparison: 1
-total CPU time: 11493 microsecond
-average CPU time: 0.459720 microsecond
-max CPU time: 26 microsecond
+total CPU time: 11405 microsecond
+average CPU time: 0.456200 microsecond
+max CPU time: 28 microsecond
+min CPU time: 0 microsecond
+
+data type: data3
+load factor: 0.50
+successful or not: success
+total comparison: 50000
+average comparison: 1.000000
+max comparison: 1
+min comparison: 1
+total CPU time: 18823 microsecond
+average CPU time: 0.376460 microsecond
+max CPU time: 17 microsecond
+min CPU time: 0 microsecond
+
+data type: data3
+load factor: 0.75
+successful or not: success
+total comparison: 75000
+average comparison: 1.000000
+max comparison: 1
+min comparison: 1
+total CPU time: 29698 microsecond
+average CPU time: 0.395973 microsecond
+max CPU time: 29 microsecond
 min CPU time: 0 microsecond
 
 data type: data1
 load factor: 0.25
 successful or not: unsuccessful
-total comparison: 19326165
-average comparison: 773.046600
-max comparison: 24978
+total comparison: 78497973
+average comparison: 3139.918920
+max comparison: 25000
 min comparison: 1
-total CPU time: 220844 microsecond
-average CPU time: 8.833760 microsecond
-max CPU time: 515 microsecond
+total CPU time: 791586 microsecond
+average CPU time: 31.663440 microsecond
+max CPU time: 484 microsecond
 min CPU time: 0 microsecond
 
 data type: data1
 load factor: 0.50
-successful or not: unsuccessful
-total comparison: 312489495
-average comparison: 6249.789900
-max comparison: 49999
+successful or not: unsuccessfu
+total comparison: 625442109
+average comparison: 12508.842180
+max comparison: 50000
 min comparison: 1
-total CPU time: 3177676 microsecond
-average CPU time: 63.553520 microsecond
-max CPU time: 1098 microsecond
+total CPU time: 5982731 microsecond
+average CPU time: 119.654620 microsecond
+max CPU time: 1043 microsecond
 min CPU time: 0 microsecond
 
 data type: data1
 load factor: 0.75
-successful or not: unsuccessful
-total comparison: 1586877776
-average comparison: 21158.370347
-max comparison: 74999
+successful or not: unsuccessfu
+total comparison: 2106663420
+average comparison: 28088.845600
+max comparison: 75000
 min comparison: 1
-total CPU time: 16330124 microsecond
-average CPU time: 217.734987 microsecond
-max CPU time: 1942 microsecond
+total CPU time: 19938073 microsecond
+average CPU time: 265.840973 microsecond
+max CPU time: 1742 microsecond
 min CPU time: 0 microsecond
 
 data type: data2
 load factor: 0.25
-successful or not: unsuccessful
-total comparison: 26759
-average comparison: 1.070360
-max comparison: 5
+successful or not: unsuccessfu
+total comparison: 34716
+average comparison: 1.388640
+max comparison: 13
 min comparison: 1
-total CPU time: 11733 microsecond
-average CPU time: 0.469320 microsecond
-max CPU time: 14 microsecond
+total CPU time: 12118 microsecond
+average CPU time: 0.484720 microsecond
+max CPU time: 18 microsecond
 min CPU time: 0 microsecond
 
 data type: data2
 load factor: 0.50
-successful or not: unsuccessful
-total comparison: 69475
-average comparison: 1.389500
-max comparison: 12
+successful or not: unsuccessfu
+total comparison: 125672
+average comparison: 2.513440
+max comparison: 39
 min comparison: 1
-total CPU time: 20186 microsecond
-average CPU time: 0.403720 microsecond
-max CPU time: 135 microsecond
+total CPU time: 21409 microsecond
+average CPU time: 0.428180 microsecond
+max CPU time: 15 microsecond
 min CPU time: 0 microsecond
 
 data type: data2
 load factor: 0.75
-successful or not: unsuccessful
-total comparison: 233649
-average comparison: 3.115320
-max comparison: 45
+successful or not: unsuccessfu
+total comparison: 655909
+average comparison: 8.745453
+max comparison: 179
 min comparison: 1
-total CPU time: 35500 microsecond
-average CPU time: 0.473333 microsecond
-max CPU time: 32 microsecond
+total CPU time: 36631 microsecond
+average CPU time: 0.488413 microsecond
+max CPU time: 21 microsecond
 min CPU time: 0 microsecond
 
 data type: data3
 load factor: 0.25
-successful or not: unsuccessful
-total comparison: 625025000
-average comparison: 25001.000000
+successful or not: unsuccessfu
+total comparison: 49999
+average comparison: 1.999960
+max comparison: 2
+min comparison: 1
+total CPU time: 11224 microsecond
+average CPU time: 0.448960 microsecond
+max CPU time: 15 microsecond
+min CPU time: 0 microsecond
+
+data type: data3
+load factor: 0.50
+successful or not: unsuccessfu
+total comparison: 1250025000
+average comparison: 25000.500000
+max comparison: 50000
+min comparison: 1
+total CPU time: 11777979 microsecond
+average CPU time: 235.559580 microsecond
+max CPU time: 1104 microsecond
+min CPU time: 0 microsecond
+
+data type: data3
+load factor: 0.75
+successful or not: unsuccessfu
+total comparison: 937612499
+average comparison: 12501.499987
 max comparison: 25001
-min comparison: 25001
-total CPU time: 6392284 microsecond
-average CPU time: 255.691360 microsecond
-max CPU time: 820 microsecond
-min CPU time: 224 microsecond
-
-data type: data3
-load factor: 0.50
-successful or not: unsuccessful
-total comparison: 2500050000
-average comparison: 50001.000000
-max comparison: 50001
-min comparison: 50001
-total CPU time: 23704741 microsecond
-average CPU time: 474.094820 microsecond
-max CPU time: 1206 microsecond
-min CPU time: 445 microsecond
-
-data type: data3
-load factor: 0.75
-successful or not: unsuccessful
-total comparison: 5625075000
-average comparison: 75001.000000
-max comparison: 75001
-min comparison: 75001
-total CPU time: 53400698 microsecond
-average CPU time: 712.009307 microsecond
-max CPU time: 1937 microsecond
-min CPU time: 668 microsecond
+min comparison: 1
+total CPU time: 9916995 microsecond
+average CPU time: 132.226600 microsecond
+max CPU time: 872 microsecond
+min CPU time: 0 microsecond
