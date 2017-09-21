@@ -179,10 +179,10 @@ void generatedata3() {
     for (int i = 25; i <= 75; i += 25) {
         data3.clear(); searchSuccess.clear(); searchFail.clear();
         for (int j = 1; j <= 100000; j++)
-            data3.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+            data3.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE) + 1));
         printf("generate list ok\n");
         for (int j = 1; j <= 100000; j++)
-            searchSuccess.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+            searchSuccess.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE) + 1));
         printf("generate success ok\n");
 
         ofstream myfile;
@@ -205,10 +205,10 @@ void generatedata3() {
     for (int i = 25; i <= 75; i += 25) {
         data3.clear(); searchSuccess.clear(); searchFail.clear();
         for (int j = 1; j <= 100000; j++)
-            data3.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+            data3.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE) + 1));
         printf("generate list ok\n");
         for (int j = 100001; j <= 100000 * 2; j++)
-            searchFail.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE * 100 / i) + 1));
+            searchFail.push_back((long long)j * (ceil((double)HASH_TABLE_SIZE) + 1));
         printf("generate unsuccessful ok\n");
 
         ofstream myfile;

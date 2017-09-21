@@ -1,3 +1,8 @@
+/*
+This file is using input generated from generatedata.cpp and will output the statistics of given input
+
+You can un-comment the printf after each search to test the hashmap
+*/
 #include <vector>
 #include <iostream>
 #include <cstdio>
@@ -6,11 +11,13 @@
 #include <cstring>
 
 using namespace std;
+// c is comparison count
 long long c = 0;
 long long totalc = 0;
 long long maxc = 0;
 long long minc = 1000000000000000000;
 
+// t is time count
 long long t;
 long long totalt = 0;
 long long maxt = 0;
@@ -34,7 +41,7 @@ class HashMapLinearProbing {
             int mapSize = hashMap.size();
             int initialHashedKey = key % mapSize;
             int hashedKey = initialHashedKey;
-            int ans = -1;
+            int ans = -1; // -1 means not found
             while (++c && hashMap[hashedKey] != NULL) {
                 if (hashMap[hashedKey]->key == key) {
                     ans = hashedKey;
@@ -65,7 +72,7 @@ class HashMapLinearProbing {
                 return hashMap[hashKey];
             return NULL;
         }
-
+        // +1 here is because array in c++ is zero based
         HashMapLinearProbing(int n) : hashMap(n + 1) { }
 };
 
@@ -74,7 +81,7 @@ int main() {
     long long key;
     char employeeName[1000];
     scanf("%d", &x);
-    HashMapLinearProbing linearhashmap(ceil((double)n));
+    HashMapLinearProbing linearhashmap(n);
     for (int i = 0; i < x; i++) {
         scanf("%lld ", &key);
         fgets(employeeName, 1000, stdin);

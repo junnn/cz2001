@@ -1,3 +1,8 @@
+/*
+This file is using input generated from generatedata.cpp and will output the statistics of given input
+
+You can un-comment the printf after each search to test the hashmap
+*/
 #include <vector>
 #include <iostream>
 #include <cstdio>
@@ -6,11 +11,13 @@
 #include <cstring>
 
 using namespace std;
+// c is comparison count
 long long c = 0;
 long long totalc = 0;
 long long maxc = 0;
 long long minc = 1000000000000000000;
 
+// t is time count
 long long t;
 long long totalt = 0;
 long long maxt = 0;
@@ -32,6 +39,10 @@ class HashMapDoubleHashing {
         int mapSize;
 
         int hash2(long long key) {
+            /*
+                the mod is (mapSize - 1) because (mapSize - 1) is coprime with mapSize
+                + 1 is because so that the hash2 will be > 0
+            */
             return 1 + ((key / mapSize) % (mapSize - 1));
         }
 
@@ -39,7 +50,7 @@ class HashMapDoubleHashing {
             int initialHashedKey = key % mapSize;
             int hashedKey = initialHashedKey;
             int d = hash2(key);
-            int ans = -1;
+            int ans = -1; // -1 means not found
             while (++c && hashMap[hashedKey] != NULL) {
                 if (hashMap[hashedKey]->key == key) {
                     ans = hashedKey;
@@ -70,13 +81,14 @@ class HashMapDoubleHashing {
                 return hashMap[hashKey];
             return NULL;
         }
-
+        // +1 here is because array in c++ is zero based
         HashMapDoubleHashing(int n) : hashMap(n + 1), mapSize(n) { }
 };
 
 int findPrime(int n) {
     /*
     sieve of eratosthenes to count the next prime in O(N)
+    only search until 2 * n, is because Bertrand's postulate
     */
     vector<bool> arr(2 * n, false);
 
@@ -100,7 +112,7 @@ int main() {
     long long key;
     char employeeName[1000];
     scanf("%d", &dataSize);
-    int nearestLargerPrime = findPrime(ceil((double)n));
+    int nearestLargerPrime = findPrime(n);
     HashMapDoubleHashing doublehashmap(nearestLargerPrime);
     for (int i = 0; i < dataSize; i++) {
         scanf("%lld ", &key);
