@@ -2,8 +2,14 @@ description of the file:
 
 linearprobing.cpp
     the implementation of the algorithm for linear probing
+    how to use:
+        1. g++ linearprobing.cpp (to compile the code)
+        2. ./linearprobing < data1_0.25_success.in (to run the code with input that can be generated from generatedata.cpp)
 doublehashing.cpp
     the implementation of the algorithm for double hashing
+    how to use:
+        1. g++ doublehashing.cpp (to compile the code)
+        2. ./doublehashing < data1_0.25_success.in (to run the code with input that can be generated from generatedata.cpp)
 generatedata.cpp
     to generate the 3 dataset, NOTE: if you use windows, you need to fix the path to absolute path, eg: C:\\data
 doublehash
